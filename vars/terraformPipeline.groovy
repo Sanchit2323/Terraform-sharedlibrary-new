@@ -25,6 +25,6 @@ def checkovScan(String checkovPath, String workspace) {
     new CheckovScan().call(checkovPath, workspace)
 }
 
-def archiveReportsCall(script) {
-    new ArchiveReports(script).call()
+def archiveReports() {
+    new ArchiveReports().call()
 }
