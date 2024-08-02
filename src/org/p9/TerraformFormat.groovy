@@ -1,4 +1,4 @@
-package org.generic
+package org.p9
 
 def call(script) {
     script.catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
