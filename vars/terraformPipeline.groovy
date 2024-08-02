@@ -12,17 +12,17 @@ def call(Map params = [:]) {
     def CHECKOV_PATH = '/var/lib/jenkins/.local/bin'
     def TFLINT_PATH = '/usr/local/bin/tflint' // Adjust the path if tflint is installed elsewhere
 
-    // Checkout repository
-    checkoutRepo(REPO_URL)
-
-    // Call Terraform operations
-    terraformInitCall(this)
-    terraformFormatCall(this)
-    terraformValidateCall(this)
-    terraformLintCall(this, TFLINT_PATH)
-    checkovScanCall(this, CHECKOV_PATH, WORKSPACE)
-    archiveReportsCall(this)
+    node {
+        checkoutRepo(REPO_URL)
+        terraformInitCall(this)
+        terraformFormatCall(this)
+        terraformValidateCall(this)
+        terraformLintCall(this, TFLINT_PATH)
+        checkovScanCall(this, CHECKOV_PATH, WORKSPACE)
+        archiveReportsCall(this)
+    }    
 }
+    
 
 def checkoutRepo(String repoUrl) {
     script {
