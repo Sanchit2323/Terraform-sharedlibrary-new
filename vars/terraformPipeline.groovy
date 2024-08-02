@@ -28,3 +28,7 @@ def checkovScan(String checkovPath, String workspace) {
 def archiveReports() {
     new ArchiveReports().call()
 }
+
+def terraformPlan() {
+    new TerraformPlan().call()
+}
