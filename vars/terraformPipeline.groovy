@@ -5,22 +5,8 @@ import org.p9.TerraformLint
 import org.p9.TerraformInit
 import org.p9.TerraformValidate
 
-def call(Map params) {
-    def REPO_URL = "https://github.com/Sanchit2323/Terra-module-CI.git"
-    
-    pipeline {
-        agent any
-        environment {
-            CHECKOV_PATH = '/var/lib/jenkins/.local/bin'
-            TFLINT_PATH = '/usr/local/bin/tflint' // Adjust the path if tflint is installed elsewhere
-            REPO_URL = "${REPO_URL}"
-        }
-    
-def checkoutRepo(String repoUrl) {
-    script {
-        echo "Checking out repository: ${repoUrl}"
-        git url: repoUrl, branch: 'main'
-    }
+def terraformInit() {
+    new TerraformInit().call()
 }
 
 def terraformInitCall(script) {
