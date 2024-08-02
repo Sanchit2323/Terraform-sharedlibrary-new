@@ -13,7 +13,7 @@ def call(Map params) {
     def TFLINT_PATH = '/usr/local/bin/tflint' // Adjust the path if tflint is installed elsewhere
 
     // Using the passed workspace from the params
-    def WORKSPACE = params.WORKSPACE ?: env.WORKSPACE
+    def WORKSPACE = params.WORKSPACE ?: script.env.WORKSPACE
 
     // Checkout repository
     checkoutRepo(REPO_URL)
