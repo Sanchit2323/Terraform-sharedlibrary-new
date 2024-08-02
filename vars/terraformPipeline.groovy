@@ -4,6 +4,7 @@ import org.p9.TerraformFormat
 import org.p9.TerraformLint
 import org.p9.TerraformInit
 import org.p9.TerraformValidate
+import org.p9.TerraformPlan
 
 def terraformInit() {
     new TerraformInit().call()
