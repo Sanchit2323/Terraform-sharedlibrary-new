@@ -17,8 +17,8 @@ def terraformValidate() {
     new TerraformValidate().call()
 }
 
-def terraformLintCall(script, String tflintPath) {
-    new TerraformLint(script).call(tflintPath)
+def terraformLint(String tflintPath) {
+    new TerraformLint().call(tflintPath)
 }
 
 def checkovScanCall(script, String checkovPath, String workspace) {
