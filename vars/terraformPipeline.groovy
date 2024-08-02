@@ -9,12 +9,8 @@ def terraformInit() {
     new TerraformInit().call()
 }
 
-def terraformInitCall(script) {
-    new TerraformInit(script).call()
-}
-
-def terraformFormatCall(script) {
-    new TerraformFormat(script).call()
+def terraformFormatCall() {
+    new TerraformFormat().call()
 }
 
 def terraformValidateCall(script) {
