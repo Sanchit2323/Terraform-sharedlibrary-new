@@ -1,11 +1,11 @@
 package org.p9
 
-def call(script, String checkovPath, String workspace) {
-    script.catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-        script.sh """
-            cd ${workspace}
-            ${checkovPath}/checkov -d . -s --output-file-path checkov_report.json
-        """
-        script.sh 'ls -l'
+def call(String checkovPath, String workspace) {
+    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+    sh """
+    cd ${workspace}
+       ${checkovPath}/checkov -d . -s --output-file-path checkov_report.json
+       ls -l
+    """
     }
 }
