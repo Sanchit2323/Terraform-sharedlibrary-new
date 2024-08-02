@@ -13,8 +13,8 @@ def terraformFormat() {
     new TerraformFormat().call()
 }
 
-def terraformValidateCall(script) {
-    new TerraformValidate(script).call()
+def terraformValidate() {
+    new TerraformValidate().call()
 }
 
 def terraformLintCall(script, String tflintPath) {
