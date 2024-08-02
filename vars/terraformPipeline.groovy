@@ -9,7 +9,7 @@ def terraformInit() {
     new TerraformInit().call()
 }
 
-def terraformFormatCall() {
+def terraformFormat() {
     new TerraformFormat().call()
 }
 
