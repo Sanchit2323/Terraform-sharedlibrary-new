@@ -1,6 +1,8 @@
 package org.p9
 
-def call(script) {
-    script.sh 'terraform validate > terraform_validate_report.txt'
+def call() {
+    sh '''
+    terraform validate > terraform_validate_report.txt
+    '''
 }
 
