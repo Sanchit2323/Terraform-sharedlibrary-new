@@ -33,3 +33,7 @@ def archiveReports() {
 def terraformPlan() {
     new TerraformPlan().call()
 }
+
+def terraformApply() {
+    new TerraformApply().call()
+}
