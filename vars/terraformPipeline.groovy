@@ -27,7 +27,7 @@ def call(Map params = [:]) {
 def checkoutRepo(String repoUrl) {
     script {
         echo "Checking out repository: ${repoUrl}"
-        git url: "${repoUrl}", branch: 'main'
+        git url: repoUrl, branch: 'main'
     }
 }
 
