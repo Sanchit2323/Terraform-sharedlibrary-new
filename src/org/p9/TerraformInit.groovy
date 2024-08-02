@@ -1,5 +1,5 @@
 package org.p9
 
-def terraformInit(script) {
+def call(script) {
     script.sh 'terraform init'
 }
