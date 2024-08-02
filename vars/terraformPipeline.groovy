@@ -21,8 +21,8 @@ def terraformLint(String TFLINT_PATH) {
     new TerraformLint().call(TFLINT_PATH)
 }
 
-def checkovScanCall(script, String checkovPath, String workspace) {
-    new CheckovScan(script).call(checkovPath, workspace)
+def checkovScan(String checkovPath, String workspace) {
+    new CheckovScan().call(checkovPath, workspace)
 }
 
 def archiveReportsCall(script) {
