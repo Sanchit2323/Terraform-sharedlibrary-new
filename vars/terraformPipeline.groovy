@@ -5,7 +5,7 @@ import org.p9.TerraformLint
 import org.p9.TerraformInit
 import org.p9.TerraformValidate
 
-def call(Map params) {
+def call(Map params = [:]) {
     def REPO_URL = "https://github.com/Sanchit2323/Terra-module-CI.git"
 
     // Use environment variables for paths
