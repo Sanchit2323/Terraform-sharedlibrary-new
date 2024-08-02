@@ -1,7 +1,7 @@
-package org.p9
+package org.generic
 
-def terraformFormat(script) {
+def call(script) {
     script.catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-            script.sh 'terraform fmt -check -diff > terraform_fmt_report.txt'
+        script.sh 'terraform fmt -check -diff > terraform_fmt_report.txt'
     }
 }
